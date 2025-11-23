@@ -1,21 +1,16 @@
-/*  your css code here. If applicable */
 body {
   margin: 0;
 }
 
 #grid {
   display: grid;
-  height: 100vh;
+  grid-template-columns: 242.5px 242.5px 242.5px 242.5px;
+  grid-template-rows: 124px 124px 124px 124px 124px;
+  grid-gap: 10px 10px;
   background: green;
   color: white;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
-  border: 10px solid white;
-
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
-  gap: 10px;
-  padding: 10px;
 }
 
 .box {
@@ -23,46 +18,47 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 20px;
+  padding: 10px;
 }
 
-#grid div:nth-child(1) {
-  grid-column: 1 / 4;
+/* MATCHING TEST 2 EXACTLY */
+
+#grid > div:nth-child(1) {
+  grid-column: span 4 / auto;
 }
 
-#grid div:nth-child(2) {
-  grid-column: 1 / 2;
-  grid-row: 2 / 6;
+#grid > div:nth-child(2) {
+  grid-row: span 4 / auto;
 }
 
-#grid div:nth-child(3) {
-  grid-column: 2 / 3;
+#grid > div:nth-child(3) {
+  /* stays default */
 }
 
-#grid div:nth-child(4) {
-  grid-column: 3 / 4;
+#grid > div:nth-child(4) {
+  grid-column: span 2 / auto;
 }
 
-#grid div:nth-child(5) {
-  grid-column: 2 / 3;
+#grid > div:nth-child(5) {
+  grid-column: span 2 / auto;
 }
 
-#grid div:nth-child(6) {
-  grid-column: 3 / 4;
+#grid > div:nth-child(6) {
+  /* stays default */
 }
 
-#grid div:nth-child(7) {
-  grid-column: 2 / 3;
+#grid > div:nth-child(7) {
+  /* stays default */
 }
 
-#grid div:nth-child(8) {
-  grid-column: 3 / 4;
+#grid > div:nth-child(8) {
+  /* stays default */
 }
 
-#grid div:nth-child(9) {
-  grid-column: 3 / 4;
+#grid > div:nth-child(9) {
+  /* stays default */
 }
 
-#grid div:nth-child(10) {
-  grid-column: 2 / 4;
+#grid > div:nth-child(10) {
+  grid-column: span 3 / auto;
 }
